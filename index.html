@@ -1,0 +1,43 @@
+<head>
+
+<script src="index.js"></script>
+</head>
+<body>
+
+<h1>Molecular Formula Calculator</h1>
+<div style="display:flex;flex-direction:column">
+Note: Please input all text without spaces, tabs, etc. Each element must be on its own line. Do not leave a new line after the last element.
+<br/>
+This brute-force method tries all possible combinations to get an answer. It will perform very badly on large problems. If you have good guesses for constraints on min and max numbers of each element, they will speed up the calculation considerably.
+
+<label>Target Min: <input type="number" id="text_target_min" value=138.15></label>
+<label>Target Max: <input type="number" id="text_target_max" value=138.24></label>
+
+
+<label for="text_masses">Masses:</label>
+<textarea id="text_masses" rows="5" >
+C:12.011
+H:1.008
+N:14.007
+O:15.999
+Cl:35.453</textarea>
+
+<label for="text_counts_min">Min number of each element (must list each element that you want considered):</label>
+<textarea id="text_counts_min" rows="5" >
+C:6
+H:10
+N:0
+O:0
+Cl:0</textarea>
+
+<label for="text_counts_max">Max number of each element (each is optional):</label>
+<textarea id="text_counts_max" rows="5" >
+H:10</textarea>
+
+
+<button onclick="compute()">Compute</button>
+<label for="result">Result:</label>
+<textarea id="result" rows="5" disabled=true ></textarea>
+
+</div>
+</body>
