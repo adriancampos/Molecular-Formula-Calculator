@@ -7,6 +7,8 @@ counts_max = {};
 results = [];
 
 function compute() {
+    document.getElementById("result").value = "ERROR";
+
     // Load from UI
     target_min = parseFloat(document.getElementById("text_target_min").value);
     target_max = parseFloat(document.getElementById("text_target_max").value);
